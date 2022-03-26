@@ -1,0 +1,403 @@
+@import "maps";
+@import "extend";
+@import "mixin";
+
+/* Aca quito los margenes al body */
+body {
+  margin: 0;
+  font-family: "Readex Pro", sans-serif; /*Google Font*/
+}
+/* Estilos del Logo */
+.header {
+  text-align: center;
+  margin-bottom: 0px;
+  &__logo {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    &__imagen {
+      width: 40%;
+    }
+  }
+}
+/* Menu con flexbox para todas las paginas*/
+.menu {
+  display: flex;
+  justify-content: center;
+  &__ul {
+    padding: 0%;
+    list-style: none;
+    margin: 5px 0px 0px 0px;
+    background-color: cadetblue;
+    &__li {
+      display: inline-block;
+      background-color: rgb(139, 245, 236);
+      &:hover {
+        transform: scale(1.3);
+      }
+      a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        padding: 0px 20px 0px 20px;
+        &:hover {
+          background-color: rgb(68, 196, 201);
+        }
+      }
+    }
+  }
+}
+
+/* Menu Fin */
+// Main para todas las paginas
+.main {
+  background-color: rgb(255, 241, 214);
+}
+// EstilosIndex
+/* Portada */
+.portada__imagen {
+  display: block;
+  width: 100%;
+}
+/* Portada Fin*/
+
+
+// Carrito
+ul {
+  list-style: none;
+}
+.submenu {
+    position: fixed;
+    top: 10px;
+    // bottom: 730px;
+    right: 5px;
+    z-index: 9999999;
+}
+
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    position: fixed;
+    right: 10px;
+    z-index: 9999999;
+    
+    background-color: white;
+    min-height: 400px;
+    min-width: 300px;
+}
+
+  .borrar-curso {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Contenedor de productos grid */
+.contenedorIndex {
+  background-color: rgb(231, 173, 231);
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 10px;
+  row-gap: 15px;
+  justify-items: center;
+  padding-top: 15px;
+  padding-left: 90px;
+  padding-right: 90px;
+  grid-template-areas:
+    "box1 box2 box3 box4"
+    "box5 box6 box7 box8";
+}
+/* Nombre de elemetos del area */
+.box1 {
+  grid-area: box1;
+}
+.box2 {
+  grid-area: box2;
+}
+.box3 {
+  grid-area: box3;
+}
+.box4 {
+  grid-area: box4;
+}
+.box5 {
+  grid-area: box5;
+}
+.box6 {
+  grid-area: box6;
+}
+.box7 {
+  grid-area: box7;
+}
+.box8 {
+  grid-area: box8;
+}
+
+/* Caja con producto y texto */
+
+.contenedorIndex__caja {
+  background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+  &:hover {
+    background-image: linear-gradient(to top, #f9f586 0%, #96fbc4 100%);
+  }
+  &__imagen img {
+    width: 100%;
+  }
+}
+.compra {
+  color: black;
+  text-decoration: none;
+  &:hover {
+    background-color: #96fbc4;
+    color: black;
+    }}
+
+
+
+/* Caja con producto y texto Fin */
+
+/* Divisor */
+.divisorVioleta {
+  height: 60px;
+  background-color: rgb(231, 173, 231);
+}
+// Fin Estilos Index
+
+// Estilos Blog
+.noticia {
+  width: 60%;
+  margin: auto;
+  text-align: justify;
+  &__jean__img {
+    margin: auto;
+    display: block;
+    width: 70%;
+  }
+  &__jean__titulo {
+    margin-top: 0px;
+  }
+}
+/* Noticias Blog Fin */
+
+// EstilosTienda
+.menuTienda {
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 20px;
+    margin: 0px 0px 0px 0px;
+    background-color: rgb(231, 173, 231);
+    li {
+      display: inline-block;
+      background-color: rgb(0, 0, 0);
+      
+
+
+      a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        padding: 0px 20px 0px 20px;
+        color: burlywood;
+       
+
+      
+      }
+      &:hover {
+        background-color: rgb(241, 8, 136);
+      }
+    }
+  }
+}
+
+/*Menu Categorias Fin */
+
+/* Contenedor de productos */
+.contenedor {
+  background-color: rgb(231, 173, 231);
+  text-align: center;
+  padding-bottom: 20px;
+  &__caja {
+    display: inline-block;
+    margin: 5px 5px 5px 5px;
+    background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+    &:hover {
+      background-image: linear-gradient(to top, #f9f586 0%, #96fbc4 100%);
+    }
+    &__imagen {
+      width: 400px;
+    }
+    &__imagen img {
+      width: 100%;
+    }
+  }
+}
+
+/* Nosotros Inicio */
+/* Divisor */
+.divisor {
+  height: 60px;
+  background-color: rgb(255, 241, 214);
+}
+.arriba img {
+  width: 4%;
+}
+
+// EstilosContacto
+.contacto__wsp {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 250%;
+  a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: green;
+  }
+}
+
+.contacto__titulo {
+  margin-top: 20px;
+  margin-bottom: 0px;
+
+  text-align: center;
+  text-decoration: underline;
+  font-size: 180%;
+}
+.contacto__titulo2 {
+  text-align: center;
+  font-size: 180%;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.contacto__mapa__escritorio {
+  text-align: center;
+  margin-top: 20px;
+}
+
+// ResponsiveIndex
+/* Vista celular */
+@media screen and (max-width: 599px) {
+  .contenedorIndex {
+    background-color: rgb(231, 173, 231);
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    column-gap: 10px;
+    row-gap: 15px;
+    justify-items: center;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-template-areas:
+      "box1" 
+      "box2"
+      "box3"
+      "box4"
+      "box5"
+      "box6"
+      "box7"
+      "box8";
+  }
+  // Blog
+  .noticia {
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+  }
+  .noticia__jean__img {
+    margin: auto;
+    display: block;
+    width: 70%;
+  }
+  // Tienda
+  .contenedor__caja__imagen {
+    width: 250px;
+  }
+  // Nosotros
+  .nosotros {
+    width: 90%;
+  }
+  // Contacto
+  .contacto__mapa__escritorio {
+    display: none;
+  }
+  .contacto__mapa__tablet {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .contacto__mapa__celular {
+    display: none;
+  }
+}
+/* Vista Tablet */
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .contenedorIndex {
+    background-color: rgb(231, 173, 231);
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 10px;
+    row-gap: 15px;
+    justify-items: center;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-areas:
+      "box1 box2 box3 box4"
+      "box5 box6 box7 box8";
+  }
+  // Blog
+  .noticia {
+    width: 75%;
+    margin: auto;
+    text-align: justify;
+  }
+  .noticia__jean__img {
+    margin: auto;
+    display: block;
+    width: 70%;
+  }
+
+  // Tienda
+  .contenedor__caja__imagen {
+    width: 300px;
+  }
+  // Nosotros
+  .nosotros {
+    width: 80%;
+  }
+  // Contacto
+  .contacto__mapa__escritorio {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .contacto__mapa__tablet {
+    display: none;
+  }
+  .contacto__mapa__celular {
+    display: none;
+  }
+}
+// Solo para contacto
+@media only screen and (min-width: 1024px) {
+  .contacto__mapa__escritorio {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .contacto__mapa__tablet {
+    display: none;
+  }
+  .contacto__mapa__celular {
+    display: none;
+  }
+}

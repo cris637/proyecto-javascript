@@ -1,0 +1,15 @@
+// Maps
+
+
+// Boton para subir
+$arriba:(
+    posicion: fixed,
+    opacidad: 70%
+    );
+
+.footer__redes__arriba {
+    position: map-get($arriba, posicion);
+    bottom: 20px;
+    right: 5px;
+    opacity: map-get($arriba, opacidad);
+  }

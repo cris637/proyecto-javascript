@@ -1,0 +1,14 @@
+// Mixin
+
+@mixin imagen($tamano,$margen,$display) {
+    width: $tamano; 
+    // no reconoce la letra ñ
+    margin: $margen;
+    display: $display;
+    
+}
+
+.nosotros__img  
+{
+    @include imagen(70%,auto, block);
+}

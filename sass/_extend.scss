@@ -1,0 +1,17 @@
+// Extend
+
+.nosotros {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  &__titulo {
+    padding-top: 20px;
+    margin-top: 0%;
+  }
+
+  &__texto {
+    @extend .nosotros__titulo;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+}
