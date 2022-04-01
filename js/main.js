@@ -27,6 +27,19 @@ function cargarEventListeners() {
 
 // Función que añade productos al carrito
 function agregarRopa(e) {
+  Toastify({
+    text: "Producto Agregado",
+    duration: 1000,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "left", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+    },
+    onClick: function () {}, // Callback after click
+  }).showToast();
+
   e.preventDefault();
   if (e.target.classList.contains("agregar-carrito")) {
     const ropa = e.target.parentElement.parentElement;
@@ -68,6 +81,18 @@ function leerDatosRopa(ropa) {
 
 // Elimina la ropa del carrito en el DOM
 function eliminarRopa(e) {
+  Toastify({
+    text: "Producto Eliminado",
+    duration: 1000,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "left", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+    },
+    onClick: function () {}, // Callback after click
+  }).showToast();
   e.preventDefault();
   if (e.target.classList.contains("borrar-ropa")) {
     const ropa = e.target.parentElement.parentElement;
