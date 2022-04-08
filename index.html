@@ -20,24 +20,25 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-<!-- Link a Estilos -->
+    <!-- Link a Estilos -->
     <link rel="stylesheet" href="css/estilos.css" />
-    
+
     <!-- Link a ToastifyJS -->
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
 
     <!-- Font Awesome pack de iconos -->
-     <script
+    <script
       src="https://kit.fontawesome.com/8a6e9501d2.js"
       crossorigin="anonymous"
     ></script>
 
     <!-- Archivo Javascript propio -->
     <script defer src="./js/main.js"></script>
-
-    
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -260,165 +261,7 @@
 
       <!-- Primera seccion donde se muestran los productos de la pagina -->
       <div id="lista-ropas" class="container">
-        <div class="row text-center">
-          <div class="col-3">
-            <div class="card mt-4">
-              <img
-                src="./img/productos/slouchyazul.png"
-                class="imagen-ropa card-img-top"
-              />
-              <div class="card-body">
-                <h4>Slouchy Azul</h4>
-                <p class="precio">$2500</p>
-                <a
-                  href="#"
-                  class="btn btn-dark input agregar-carrito"
-                  data-id="1"
-                  >Agregar Al Carrito</a
-                >
-              </div>
-            </div>
-            <!--.card-->
-          </div>
-          <div class="col-3">
-            <div class="card mt-4">
-              <img
-                src="./img/productos/slouchycelestenevado.png"
-                class="imagen-ropa card-img-top"
-              />
-              <div class="card-body">
-                <h4>Slouchy Celeste
-                </h4>
-                <p class="precio">$2500</p>
-                <a
-                  href="#"
-                  class="btn btn-dark input agregar-carrito"
-                  data-id="2"
-                  >Agregar Al Carrito</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="card mt-4">
-              <img
-                src="./img/productos/shortcamuflado.png"
-                class="imagen-ropa card-img-top"
-              />
-              <div class="card-body">
-                <h4>Short Camuflado</h4>
-                <p class="precio">$2300</p>
-                <a
-                  href="#"
-                  class="btn btn-dark input agregar-carrito"
-                  data-id="3"
-                  >Agregar Al Carrito</a
-                >
-              </div>
-            </div>
-            <!--.card-->
-          </div>
-
-          <div class="col-3">
-            <div class="card mt-4">
-              <img
-                src="./img/productos/shortazul.png"
-                class="imagen-ropa card-img-top"
-              />
-              <div class="card-body">
-                <h4>Short Azul</h4>
-                <p class="precio">$2300</p>
-                <a
-                  href="#"
-                  class="btn btn-dark input agregar-carrito"
-                  data-id="4"
-                  >Agregar Al Carrito</a
-                >
-              </div>
-            </div>
-            <!--.card-->
-          </div>
-        </div>
-        <!--.row-->
-        <div class="row text-center">
-          <div class="col-3">
-            <div class="card mt-4">
-              <img
-                src="./img/productos/camperanegra.png"
-                class="imagen-ropa card-img-top"
-              />
-              <div class="card-body">
-                <h4>Campera Negra</h4>
-                <p class="precio">$2700</p>
-                <a
-                  href="#"
-                  class="btn btn-dark input agregar-carrito"
-                  data-id="5"
-                  >Agregar Al Carrito</a
-                >
-              </div>
-            </div>
-            <!--.card-->
-          </div>
-          <div class="col-3">
-            <div class="card mt-4">
-              <img
-                src="./img/productos/camperaroja.png"
-                class="imagen-ropa card-img-top"
-              />
-              <div class="card-body">
-                <h4>Campera Roja</h4>
-                <p class="precio">$2700</p>
-                <a
-                  href="#"
-                  class="btn btn-dark input agregar-carrito"
-                  data-id="6"
-                  >Agregar Al Carrito</a
-                >
-              </div>
-            </div>
-            <!--.card-->
-          </div>
-
-          <div class="col-3">
-            <div class="card mt-4">
-              <img
-                src="./img/productos/jumpernegro.png"
-                class="imagen-ropa card-img-top"
-              />
-              <div class="card-body">
-                <h4>Jumper Negro</h4>
-                <p class="precio">$1500</p>
-                <a
-                  href="#"
-                  class="btn btn-dark input agregar-carrito"
-                  data-id="7"
-                  >Agregar Al Carrito</a
-                >
-              </div>
-            </div>
-            <!--.card-->
-          </div>
-          <div class="col-3">
-            <div class="card mt-4">
-              <img
-                src="./img/productos/polleraceleste.png"
-                class="imagen-ropa card-img-top"
-              />
-              <div class="card-body">
-                <h4>Pollera Celeste</h4>
-                <p class="precio">$1000</p>
-                <a
-                  href="#"
-                  class="btn btn-dark input agregar-carrito"
-                  data-id="8"
-                  >Agregar Al Carrito</a
-                >
-              </div>
-            </div>
-            <!--.card-->
-          </div>
-        </div>
+        <div class="row text-center" id="pintarProductosArray"></div>
         <!--.row-->
       </div>
     </main>
@@ -510,9 +353,9 @@
 
     <!-- JS Toastify -->
 
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-
-
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
   </body>
 </html>
