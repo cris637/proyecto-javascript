@@ -3,6 +3,7 @@ let carrito = [];
 const pintarProductosAppend = document.getElementById("pintarProductosArray"); // Seleccionamos el contenedor donde se pintarán los productos
 const contenedorCarrito = document.querySelector("#lista-carrito tbody"); // Seleccionamos el contenedor de los productos del carrito
 const vaciarCarritp = document.getElementById("vaciar-carrito");
+const enviarCarrito = document.getElementById("enviar-carrito");
 
 const arrProductos = [];
 
@@ -79,6 +80,12 @@ function pintarProductos(array, contenedor) {
   addCarrito(); // Agregamos la funcion de agregar al carrito
 }
 
+
+
+
+
+
+
 // Creamos una función que agregue productos al carrito
 
 function addCarrito() {
@@ -113,6 +120,8 @@ function addCarrito() {
 
 // Creamos una función que muestre los productos del array carrito de manera dinámica
 
+
+
 function pintarCarrito(array, contenedor) {
   contenedor.innerHTML = "";
   for (const item of array) {
@@ -129,11 +138,23 @@ function pintarCarrito(array, contenedor) {
             </td>
         `;
     contenedor.append(card);
+
+  // enviar carrito
+    let enviar = document.createElement("a");
+    enviar.innerHTML = `
+            
+                <a href="https://api.whatsapp.com/send?phone=212121&text=Hola%20me%20gustaria%20hacer%20un%20pedido%20con%20las%20siguientes%20cosas ${item.nombre} ${item.cantidad}" class="btn btn btn-success"">Enviar Carrito</a>
+        `;
+    contenedor.append(enviar);
+
   }
+
   borrarProducto(); // Agregamos la funcion de borrar productos del carrito
   carritoVacioNoti(); // Agreamos la funcion de notificación de carrito vacío
   saveStorage(); // Storage
+  console.log(carrito)
 }
+
 
 // Creamos una función que elimine productos del carrito
 
@@ -225,3 +246,6 @@ function loadStorage(name) {
     pintarCarrito(carrito, contenedorCarrito);
   }
 }
+
+
+
