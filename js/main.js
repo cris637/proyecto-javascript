@@ -64,7 +64,7 @@ function pintarProductos(array, contenedor) {
   contenedor.innerHTML = "";
   for (const item of array) {
     let card = document.createElement("div");
-    card.classList.add("col-3");
+    card.classList.add("col-lg-3" ,"col-md-6", "col-sm-12");
     card.innerHTML = `
             <div class="card mt-4">
                 <img src="${item.imagen}" class="imagen-ropa card-img-top" title="${item.nombre}">
@@ -275,7 +275,7 @@ function enviar(carrito) {
   let link = `https://api.whatsapp.com/send?phone=5493865394041&text=Hola%20me%20gustaría%20hacer%20un%20pedido%20con%20las%20siguientes%20cosas %0A`;
   for (const producto of carrito) {
     // Pasar los parámetros de cada producto a texto
-    const productoString = `${producto.cantidad}%20unidades de ${producto.nombre} con costo por prenda de $${producto.precio},`;
+    const productoString = `${producto.cantidad} unidades de ${producto.nombre} con costo por prenda de $${producto.precio},`;
 
     // Por cada producto en el carrito se añadirá el producto a la url
     link += `${productoString}%0A`;
